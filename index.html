@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>project 2</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="popup" onclick="myFunction()">Hey! Do you like free music?
+  	<span class="popuptext" id="myPopup">Click to download!</span>
+	</div>
+<button class="lime" onclick="popup()">download</button>
+	
+	<img class="limes" src="images/limewire-logo1.jpg" width="120" height="50" alt=""/>
+<div>
+  <button id="play" onclick="playVideo()" type="button">get your music!</button>
+	<video id="myVid" class="facepalm" muted display controls>
+   <source src="facepalm.mp4" type="video/mp4">
+	</video>
+</div>
+	<video id="autoplay" class="windows" muted display controls>
+   <source src="windows.mp4" type="video/mp4">
+</video>
+<script>
+
+function popup(){
+	var txt;
+var r = confirm("This link is not protected, by clicking continue you acknowledge the risk you are taking");
+	if (r == true) {
+		great();
+}	else {
+  		great();
+	}
+	document.getElementById("demo").innerHTML = txt;
+}
+function great(){
+	var txt;
+var r = prompt("Awesome! Type in your Social Security Number for Certification");
+	if (r != null){
+		certificate();
+	}
+  document.getElementById("demo").innerHTML = text;
+}
+	
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+	
+autoplay.style.visibility='hidden';
+myVid.style.visibility='hidden';
+play.style.visibility='hidden';
+function certificate(){
+	var txt;
+	var r = confirm("thank you for your patience, downloading will begin shortly.");
+		if (r== true){
+			play.style.visibility= 'visible';
+			
+		}
+	document.getElementById("demo").innerHTML = txt;
+}
+
+var myVideo = document.getElementById("myVid");
+function playVideo() { 
+ myVideo.play(); 
+ autoplay.style.visibility='visible';
+myVid.style.visibility= 'visible';
+} 
+
+document.getElementById('autoplay').play();
+	</script>
+</body>
+</html>
